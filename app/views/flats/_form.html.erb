@@ -1,0 +1,22 @@
+<%= simple_form_for @flat do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :name %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :address %>
+    </div>
+  </div>
+  <%= f.input :description %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :number_of_guests, as: :integer %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :price_per_night, as: :integer, label: "Price per night (€)" %>
+    </div>
+  </div>
+  <%= f.input :picture_url, label: "Picture URL" %>
+
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
